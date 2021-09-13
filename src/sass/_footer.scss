@@ -27,6 +27,7 @@
     }
 
     &__title{
+        cursor: default;
         text-align: left;
         font-family: $font-secondary;
         font-weight: 400;
@@ -110,11 +111,12 @@
 }
 
 .contact-box {
+    outline: 1px solid blue;
     font-weight: 700;
     text-align: right;
     font-size: 12px;
     line-height: 1.86;
-    
+    cursor: default;
     @media screen and (min-width: $tablet){
         font-size: 14px;
     }
@@ -123,8 +125,18 @@
         letter-spacing: 0.02em;
     }
 
+    // &__text {
+        &:hover {
+            .contact-box__phone{
+                transform: scale(1.1);
+            }
+        }
+    // }
+
     &__phone {
+        display: inline-block;
         color: $accent-color;
+        @extend %transform;
     }
 }
 
@@ -132,7 +144,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    cursor: default;
     border-top: 1px solid $border-footer-color;
     padding-top: 22px;
     padding-bottom: 25px;
@@ -153,10 +165,16 @@
         max-width: 150px;
         font-size: 14px;
         line-height: 1.52;
+
+        @extend %transform;
+
         @media screen and (min-width: $tablet){
             line-height: 1.86;
             max-width: 276px;
             letter-spacing: 0.02em;
+        }
+        &:hover {
+          transform: scale(1.3);
         }
     }
 }
@@ -167,3 +185,22 @@
     }
 }
 
+  $anim-func: cubic-bezier(0.4, 0, 0.2, 1);
+  $anim-time: 2000ms;
+
+  /*Animation placeholders*/
+  %color{
+    transition: color $anim-time $anim-func;
+  }
+  
+  %transform {
+    transition: transform $anim-time $anim-func;
+  }
+  
+  %border-color {
+    transition: border-color $anim-time $anim-func;
+  }
+  
+  %fill {
+    transition: fill $anim-time $anim-func;
+  }
