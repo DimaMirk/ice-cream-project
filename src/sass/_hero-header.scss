@@ -1,7 +1,8 @@
-
+header {
+   background-color: $header-base-color;;
+}
 .container--modicator{
     height: 502px;
-    background-color: $header-base-color;
     position: relative;
     overflow: hidden;
     padding-top: 6px;
@@ -463,7 +464,7 @@
         width: 236px;
         height: 557px;
         right: 450px;
-        bottom:-16px;
+        bottom:-17px;
     }
 }
 
@@ -497,7 +498,6 @@
     line-height: 1.5;
     letter-spacing: 0;
     color: $button-white-color;
-    display: none;
     position: relative;
     
 
@@ -532,7 +532,7 @@
     
 }
 
-.product {
+.protuct-milk {
     margin-left: 120px;
     width: 114px;
     height: 73px;
@@ -540,8 +540,11 @@
     line-height: 1.5;
     letter-spacing: 0;
     color: $button-white-color;
-    display: none;
     position: relative;
+    
+    @media screen and (min-width: $tablet){
+        margin-left: 0;
+    }
     
 }
 
