@@ -4,7 +4,7 @@ header {
 .container--modicator{
     height: 502px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     padding-top: 6px;
     border-bottom: 1px solid $background-mobile-menu;
     
@@ -236,13 +236,13 @@ header {
     @media screen and (min-width: $desktop){
        display: none;
     }
-    &__icon{
-    fill: $button-white-color;
+    .icon-close {
+        stroke: $button-white-color;
     }
     
 
 }
-
+    
 .js-close-menu {
     position: absolute;
     top: 23px;
@@ -499,7 +499,7 @@ header {
     letter-spacing: 0;
     color: $button-white-color;
     position: relative;
-    
+    display: none;
 
     @media screen and (min-width: $tablet){
         display: block;
