@@ -103,7 +103,7 @@ header {
     width: 250px;
     background-color: $background-mobile-menu;
     z-index: 50;
-    transform: translateY(100%);
+    transform: translateX(100%);
 
     @media screen and (min-width: $tablet){
         width: 254px;
@@ -111,7 +111,7 @@ header {
 
     @media screen and (min-width: $desktop){
         position: static;
-        transform: translateY(0);
+        transform: translateX(0);
         width: 541px;
         height: 50px;
         display: flex;
@@ -527,9 +527,7 @@ header {
             top: -70px;
             left: -200px;
         }
-    }
-
-    
+    }    
 }
 
 .protuct-milk {
