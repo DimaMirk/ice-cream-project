@@ -13,10 +13,10 @@ article {
   }
   &__img {
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   &__description-wrapper {
-    max-width: 620px;
+    max-width: 926px;
     position: relative;
     background-color: $background-reviews;
     z-index: -3;
@@ -44,7 +44,7 @@ article {
     line-height: 186%;
     text-align: center;
     color: $secondary-text-color;
-    margin-top: 25px;
+    margin-top: 35px;
     margin-bottom: 50px;
   }
 }
