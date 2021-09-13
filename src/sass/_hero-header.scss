@@ -1,7 +1,8 @@
-
+header {
+   background-color: $header-base-color;;
+}
 .container--modicator{
     height: 502px;
-    background-color: $header-base-color;
     position: relative;
     overflow: hidden;
     padding-top: 6px;
