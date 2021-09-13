@@ -47,6 +47,10 @@ header {
     }
 }
 
+ .buy.hiddenBtn{
+     display: none;
+ }
+
 .menu-switch {
     display: flex;  
 }
@@ -123,7 +127,7 @@ header {
 }
 
 .nav-tools.is-open {
-    position: absolute;
+    // position: absolute;
     pointer-events: auto;
     transform: translateX(0);
     height: 100vh;
