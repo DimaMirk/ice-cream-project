@@ -464,7 +464,7 @@ header {
         width: 236px;
         height: 557px;
         right: 450px;
-        bottom:-16px;
+        bottom:-17px;
     }
 }
 
@@ -498,7 +498,6 @@ header {
     line-height: 1.5;
     letter-spacing: 0;
     color: $button-white-color;
-    display: none;
     position: relative;
     
 
@@ -533,7 +532,7 @@ header {
     
 }
 
-.product {
+.protuct-milk {
     margin-left: 120px;
     width: 114px;
     height: 73px;
@@ -541,8 +540,11 @@ header {
     line-height: 1.5;
     letter-spacing: 0;
     color: $button-white-color;
-    display: none;
     position: relative;
+    
+    @media screen and (min-width: $tablet){
+        margin-left: 0;
+    }
     
 }
 
