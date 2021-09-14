@@ -137,6 +137,6 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $header-circle-color !important;
-  text-shadow: $header-circle-color 0px 0px 7px;
+  color: $primary-text-color !important;
+  opacity: 0.5;
 }
