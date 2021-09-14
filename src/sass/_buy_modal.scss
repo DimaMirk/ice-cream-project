@@ -1,8 +1,9 @@
 .modal-buy {
   display: none;
+  max-height: 100vh;
   position: fixed;
-  z-index: 50;
-  padding-top: 5%;
+  z-index: 100;
+  // padding-top: 5%;
   left: 0;
   top: 0;
   width: 100%;
@@ -15,11 +16,12 @@
 .modal-content {
   position: relative;
   background-color: #e1bee7;
+  max-height: 100vh;
   margin: auto;
   padding: 0;
   border: 3px solid $accent-color;
   border-radius: 10px;
-  width: 50%;
+  max-width: 500px;
   box-shadow: 0 4px 8px 0 rgba(255, 22, 131, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -27,7 +29,9 @@
   animation-duration: 0.4s;
   background-color: $header-base-color;
   border-radius: 5px;
-  padding-bottom: 10px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 20%;
 }
 
 @-webkit-keyframes animatetop {
@@ -71,7 +75,7 @@
   color: $accent-color;
   font-family: $font-secondary;
   font-size: 30px;
-  height: 80px;
+  height: 60px;
   text-align: center;
 }
 
@@ -79,11 +83,20 @@
   padding: 2px 16px;
   display: flex;
   &__img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    margin-bottom: 10px;
   }
   &__input {
+    display: block;
     background-color: $second-section-color;
     width: 100px;
     border-radius: 5px;
+    border: 1px solid $accent-color;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -108,5 +121,16 @@
   &__date {
     background-color: $second-section-color;
     border-radius: 5px;
+    border: 1px solid $accent-color;
   }
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+}
+.modal__date--comment {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
 }
