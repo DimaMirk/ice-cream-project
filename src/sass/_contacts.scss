@@ -301,6 +301,7 @@ transition: linear all 250ms;
     position: fixed;
     z-index: 99;
     visibility: visible;
+
   
     top: 0;
     left: 0;
@@ -322,7 +323,7 @@ transition: linear all 250ms;
   .modal{
     position: relative;
     text-align: center;
-    overscroll-behavior:none;
+    
     
     top: 50%;
     left: 50%;
