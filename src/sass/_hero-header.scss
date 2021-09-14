@@ -85,6 +85,9 @@ header {
     }
 
 }
+.buy.hiddenBtn{
+    display: none;
+}
 // Меню Навігації
 
 .nav-tools {
@@ -188,6 +191,7 @@ header {
         display: none;
     }
 }
+
 
 .nav-tools__button {
     width: 209px;

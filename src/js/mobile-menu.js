@@ -2,21 +2,37 @@
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
+  const closeMenuBtnOne = document.querySelector('.closeMenuBtnOne');
+  const closeMenuBtnTwo = document.querySelector('.closeMenuBtnTwo');
+  const closeMenuBtnThree = document.querySelector('.closeMenuBtnThree');
+  const closeMenuBtnFour = document.querySelector('.closeMenuBtnFour');
+  const closeMenuBtnFive = document.querySelector('.closeMenuBtnFive');
+  const burger = document.querySelector('.burger');
+  const heroBtn = document.querySelector('.heroBtn');
+
 
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
-
+    
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
+
+    heroBtn.classList.toggle('/')
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtnOne.addEventListener('click', toggleMenu);
+  closeMenuBtnTwo.addEventListener('click', toggleMenu);
+  closeMenuBtnThree.addEventListener('click', toggleMenu);
+  closeMenuBtnFour.addEventListener('click', toggleMenu);
+  closeMenuBtnFive.addEventListener('click', toggleMenu);
+  burger.addEventListener('click', toggleMenu);
 
   // Закрываем мобильное меню на более широких экранах
   // в случае изменения ориентации устройства.
