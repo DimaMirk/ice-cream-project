@@ -41,7 +41,7 @@
         font-family: $font-secondary;
         font-weight: 400;
         text-transform: uppercase;
-
+        @extend %anim-all;
         &--one {
             font-size: 18px;
             line-height: 1.167;
@@ -107,7 +107,6 @@
                 margin-right: -2px;
             }
         }
-        &,
         &--made,
         &--ice-cream,
         &--letter {
