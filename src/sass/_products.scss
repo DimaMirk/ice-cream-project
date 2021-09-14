@@ -352,6 +352,7 @@
   &:hover .product__overlay {
     cursor: pointer;
     opacity: 1;
+    box-shadow: 0px 5px 15px rgba(144, 35, 62, 0.632);
   }
 
   &:hover .icon-arrow-right {
@@ -360,10 +361,24 @@
     height: 50px;
     margin-top: -10px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+    background-color: $accent-color;
+    border-radius: 35%;
+    fill: $button-white-color;
   }
 
   &:hover .product__description {
     opacity: 0;
+  }
+
+  &:hover .product__name {
+    z-index: 60;
+    font-size: 22px;
+    @media screen and (min-width: $desktop) {
+      font-size: 33px;
+    }
+  }
+  &:hover .marker {
+    z-index: 60;
   }
 }
 
@@ -385,6 +400,9 @@
   @media screen and (min-width: $desktop) {
     font-size: 30px;
   }
+
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition-property: z-index, font-size;
 }
 
 .product__description {
@@ -430,7 +448,7 @@
   z-index: 55;
 
   transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition-property: width, height, margin-top, transform, box-shadow;
+  transition-property: width, height, margin-top, transform, box-shadow, background-color, fill;
 }
 
 //Маркер - три крапки
@@ -462,6 +480,9 @@
     left: 10px;
     top: 0px;
   }
+
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition-property: z-index;
 }
 
 //overlay
@@ -480,7 +501,7 @@
   opacity: 0;
 
   transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition-property: opacity;
+  transition-property: opacity, box-shadow;
 }
 
 .product__text {

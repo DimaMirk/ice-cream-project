@@ -9,8 +9,6 @@
   const closeMenuBtnFive = document.querySelector('.closeMenuBtnFive');
   const burger = document.querySelector('.burger');
   const heroBtn = document.querySelector('.heroBtn');
-
-
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -21,10 +19,9 @@
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
-
-    heroBtn.classList.toggle('/')
+    heroBtn.classList.toggle('hiddenBtn')
   };
-
+  
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtnOne.addEventListener('click', toggleMenu);
