@@ -26,6 +26,18 @@
   text-transform: uppercase;
 
   color: $primary-header-color;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition-property: letter-spacing;
+
+  &:hover {
+    animation: springy-text;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 26px;
@@ -33,6 +45,15 @@
   }
   @media screen and (min-width: $desktop) {
     font-size: 30px;
+
+    @keyframes springy-text {
+      0% {
+        letter-spacing: 0.7em;
+      }
+      100% {
+        letter-spacing: 0.1em;
+      }
+    }
   }
 }
 
@@ -49,6 +70,18 @@
   text-transform: uppercase;
 
   color: $accent-color;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition-property: letter-spacing;
+
+  &:hover {
+    animation: springy-text;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 150px;
@@ -57,6 +90,15 @@
   @media screen and (min-width: $desktop) {
     margin-bottom: 259px;
     font-size: 58px;
+
+    @keyframes springy-text {
+      0% {
+        letter-spacing: 0.7em;
+      }
+      100% {
+        letter-spacing: 0.1em;
+      }
+    }
   }
 }
 
