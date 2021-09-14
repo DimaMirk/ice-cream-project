@@ -177,12 +177,12 @@ $bubble-count: 50;
     } 
 
     @media screen and (min-width: $desktop){
-        left: 46px;
+    left: 46px;
     } 
 }
 
 .buy.hiddenBtn{
-     display: none;
+    display: none;
  }
 
 .menu-switch {
@@ -205,9 +205,6 @@ $bubble-count: 50;
     color: $accent-color;
 
     @include animation-efect (transform);
-    @include animation-efect (background-color);
-
-    
 
     &:hover,
     :focus {
@@ -248,7 +245,7 @@ $bubble-count: 50;
     background-color: $background-mobile-menu;
     z-index: 50;
     transform: translateX(100%);
-
+    @include animation-efect (transform);
     @media screen and (min-width: $tablet){
         width: 254px;
     }  
@@ -309,13 +306,16 @@ $bubble-count: 50;
         line-height: 1.28;
         color: $button-white-color;
         cursor: pointer;
+
         @include animation-efect (background-color);
+
         @include animation-efect (transform);
-        &:hover,:focus {
+        
+        &:hover,
+        :focus {
             transform: translateY(-2px);
             color: $accent-color;
         }
-    
     }
 
     &--current{
