@@ -13,7 +13,11 @@ h1,h2,h3,h4,h5,h6{
     margin-left: auto;
     margin-right: auto;
     min-width:320px ;
-    padding-bottom: 130px;
+    padding-bottom: 113px;
+    @media screen and (min-width:$tablet) {
+        padding-bottom: 165px; 
+    }
+  
 
     background-color:$second-section-color;
     & > .container{
@@ -50,13 +54,9 @@ h1,h2,h3,h4,h5,h6{
         margin: 0 auto 0 auto;  
         
     }
-    @media screen and (max-width:$tablet) {
-        max-width: 220px;
-    
-    }
  
-    @media screen and (min-width:$tablet) and (max-width:1279px) {
-        max-width: 220px;
+ 
+    @media screen and (min-width:$tablet) {
         margin: 0 auto 0 auto;
         padding: 50px 31px;
         margin-top: -78px;
@@ -143,21 +143,26 @@ h1,h2,h3,h4,h5,h6{
     font-family: $font-primary;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 18px;
     color: black;
+    margin-bottom: 10px;
     @media screen and (min-width:$tablet){
-      
+        margin-bottom: 14px;
         font-size: 14px;
         
     }
     @media screen and (min-width:$desktop){
         font-size: 16px;
+        margin-bottom: 10px;
         line-height: 183%;
     }
     
 }
+.section-contacts__subtitle.day{
+     margin-bottom: 0px;
+}
 .section-contacts__text{
-    font-weight: 500;
+
     font-size: 12px;
     line-height: 18px;
     color: $primary-text-color;
@@ -182,12 +187,12 @@ h1,h2,h3,h4,h5,h6{
     color: $primary-header-color;
     margin-bottom: 10px;
     @media screen and (min-width:$tablet){
-        margin-bottom: 32px;
+        margin-bottom: 16px;
         font-size: 13.9px;
        
     }
     @media screen and (min-width:$desktop){
-        margin-bottom: 32px;
+        margin-bottom: 15px;
         font-size: 16px;
         line-height: 183%;
     }
@@ -364,9 +369,9 @@ transition: linear all 250ms;
     text-align: center;
 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 0.03em;
-    color: #FFB8CA;
+    color: #D41443;
     margin-bottom: 12px;
   }
   .modal__map{
@@ -379,8 +384,9 @@ transition: linear all 250ms;
       margin-bottom: 20px;
   }
   .modal__adress{
-    color:#FFB8CA;
+    color:#D41443;
     margin-bottom: 15px;
+    font-size: 17px;
   }
   .modal_map-btn{
     margin-left: auto;
