@@ -35,25 +35,7 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 15px;
-        cursor: default;
-
-        &:hover {
-            animation: springy-text; 
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: forwards;
-            }
-            @keyframes springy-text {
-            0%   {
-                letter-spacing: 1.2em;
-            }
-            100%   {
-                letter-spacing: 0.1em;
-            }
-            }
+        cursor: default;        
 
         @media screen and (min-width: $tablet) {
             font-size: 26px;
@@ -64,6 +46,24 @@
             font-size: 30px;
             line-height: 1.13;
             margin-bottom: 15px;
+
+            &:hover {
+                animation: springy-text; 
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+                }
+                @keyframes springy-text {
+                0%   {
+                    letter-spacing: 1.2em;
+                }
+                100%   {
+                    letter-spacing: 0.1em;
+                }
+                }
           }
     }
     &__title {
@@ -79,25 +79,7 @@
         text-transform: uppercase;
         margin-bottom: 26px;
         padding-left: 9px;  
-        cursor: default;   
-
-        &:hover {
-            animation: springy-text; 
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: forwards;
-            }
-            @keyframes springy-text {
-            0%   {
-                letter-spacing: 0.7em;
-            }
-            100%   {
-                letter-spacing: 0.1em;
-            }
-            }
+        cursor: default;           
         
         @media screen and (min-width: $tablet) {
             font-size: 48px;
@@ -108,6 +90,24 @@
             font-size: 58px;
             line-height: 1.14;
             margin-bottom: 55px;
+
+            &:hover {
+                animation: springy-text; 
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+                }
+                @keyframes springy-text {
+                0%   {
+                    letter-spacing: 0.7em;
+                }
+                100%   {
+                    letter-spacing: 0.1em;
+                }
+                }
           }
     }
     &__main {
