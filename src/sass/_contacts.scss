@@ -54,9 +54,8 @@ h1,h2,h3,h4,h5,h6{
         margin: 0 auto 0 auto;  
         
     }
- 
- 
-    @media screen and (min-width:$tablet) {
+
+    @media screen and (min-width:769px) {
         margin: 0 auto 0 auto;
         padding: 50px 31px;
         margin-top: -78px;
