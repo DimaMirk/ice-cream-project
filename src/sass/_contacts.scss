@@ -54,9 +54,8 @@ h1,h2,h3,h4,h5,h6{
         margin: 0 auto 0 auto;  
         
     }
- 
- 
-    @media screen and (min-width:$tablet) {
+
+    @media screen and (min-width:769px) {
         margin: 0 auto 0 auto;
         padding: 50px 31px;
         margin-top: -78px;
@@ -301,6 +300,7 @@ transition: linear all 250ms;
     position: fixed;
     z-index: 99;
     visibility: visible;
+
   
     top: 0;
     left: 0;
@@ -323,6 +323,7 @@ transition: linear all 250ms;
     position: relative;
     text-align: center;
     
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -337,6 +338,9 @@ transition: linear all 250ms;
     background-color: #fff;
     border-radius: 4px;
     padding: 40px;
+    @media screen and (max-width:465px) {
+        box-sizing: content-box;  
+    }
   }
   .modal__close-btn{
     position: absolute;
@@ -348,8 +352,8 @@ transition: linear all 250ms;
     justify-content: center;
     
 
-    width: 30px;
-    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
 
     border: 1px solid #FFB8CA;
     border-radius: 50%;
@@ -379,9 +383,10 @@ transition: linear all 250ms;
       justify-content: center;
       border: 2px solid  #FFB8CA;
       border-radius: 4px;
-      width: 370px;
-      height: 408px;
+      max-width: 370px;
+      height: 410px;
       margin-bottom: 20px;
+      
   }
   .modal__adress{
     color:#D41443;
@@ -395,7 +400,7 @@ transition: linear all 250ms;
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    width: 200px;
+    max-width: 200px;
     height: 44px;
     border-radius: 22px;
     background-color: #fff;
@@ -413,4 +418,11 @@ transition: linear all 250ms;
   }
   .modal_btn-text{
     color: #FFB8CA;
+  }
+
+  .modal__google-maps{
+    width: 100%;
+    height: 100%;
+          
+      
   }
