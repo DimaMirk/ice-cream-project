@@ -92,7 +92,7 @@
             }
             @keyframes springy-text {
             0%   {
-                letter-spacing: 1.2em;
+                letter-spacing: 0.7em;
             }
             100%   {
                 letter-spacing: 0.1em;
@@ -136,7 +136,7 @@
             animation-name: spin;
             animation-duration: 5s;
             animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            animation-iteration-count: 1;
                 
             @keyframes spin {
             0% {
@@ -187,21 +187,11 @@
         margin-top: 46px;
         margin-bottom: 27px;
         cursor: default;
+        transform: scale(1);
+        transition: all linear 250ms;
 
         &:hover {
-            animation: animate_grow 2s 1;    
-        
-            @keyframes animate_grow {
-                0% {
-                transform: scale3d(1, 1, 1);
-                }
-                50% {
-                transform: scale3d(1.2, 1.2, 1.2);
-                }
-                100% {
-                transform: scale3d(1, 1, 1);
-                }
-                }
+            transform: scale(1.2);            
             }
         
         @media screen and (min-width: $tablet) {
@@ -226,21 +216,11 @@
         font-style: normal;
         line-height: 1.58;  
         cursor: default;  
+        transform: scale(1);
+        transition: all linear 250ms;
 
         &:hover {
-            animation: animate_grow 2s 1;    
-        
-            @keyframes animate_grow {
-                0% {
-                transform: scale3d(1, 1, 1);
-                }
-                50% {
-                transform: scale3d(1.2, 1.2, 1.2);
-                }
-                100% {
-                transform: scale3d(1, 1, 1);
-                }
-                }
+            transform: scale(1.2);
             }
         
         @media screen and (min-width: $tablet) {
