@@ -14,16 +14,7 @@
             padding-bottom: 66px;
 
             background-image: url("../images/milk-desktop.png");
-            background-position: 70% 80%;
-
-            &:hover {
-                animation: city 5s linear infinite;    
-                
-                @keyframes city {
-                    from { background-position: -1000px 100%, 0 0;}
-                    to { background-position: 0 100%, 0 0; }
-                }
-            }
+            background-position: 70% 80%;          
         }
         @media screen and (min-width: $desktop) {
             padding-top: 125px;
@@ -44,10 +35,25 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 15px;
+        cursor: default;
 
         &:hover {
-            transform: scale(1.5, 1.5);
-        }
+            animation: springy-text; 
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            }
+            @keyframes springy-text {
+            0%   {
+                letter-spacing: 1.2em;
+            }
+            100%   {
+                letter-spacing: 0.1em;
+            }
+            }
 
         @media screen and (min-width: $tablet) {
             font-size: 26px;
@@ -72,11 +78,26 @@
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 26px;
-        padding-left: 9px;     
+        padding-left: 9px;  
+        cursor: default;   
 
         &:hover {
-            transform: scale(1.5, 1.5);
-        }
+            animation: springy-text; 
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            }
+            @keyframes springy-text {
+            0%   {
+                letter-spacing: 1.2em;
+            }
+            100%   {
+                letter-spacing: 0.1em;
+            }
+            }
         
         @media screen and (min-width: $tablet) {
             font-size: 48px;
@@ -111,24 +132,26 @@
         width: 280px;
         height: 279px;
 
+        &:hover {
+            animation-name: spin;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+                
+            @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+          
+            50% {
+              transform: rotate(40deg);
+            }        
+            }
+            }
+
         @media screen and (min-width: $tablet) {
         height: 340px;
         width: 339px;    
-
-        animation-name: spin;
-        animation-duration: 5s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-            
-        @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-      
-        50% {
-          transform: rotate(90deg);
-        }        
-        }
         }
 
         @media screen and (min-width: $desktop) {
@@ -163,18 +186,29 @@
         line-height: 1.58;
         margin-top: 46px;
         margin-bottom: 27px;
+        cursor: default;
+
+        &:hover {
+            animation: animate_grow 2s 1;    
+        
+            @keyframes animate_grow {
+                0% {
+                transform: scale3d(1, 1, 1);
+                }
+                50% {
+                transform: scale3d(1.2, 1.2, 1.2);
+                }
+                100% {
+                transform: scale3d(1, 1, 1);
+                }
+                }
+            }
         
         @media screen and (min-width: $tablet) {
             font-size: 14px;
             line-height: 1.79;
             margin-top: 50px;
             margin-bottom: 19px;
-
-            &:hover {
-                transform: scale(1.5);
-                transform: rotate(90deg);    
-                transform: translateX(-50px);
-                }
         }
         @media screen and (min-width: $desktop) {
             font-size: 16px;
@@ -190,7 +224,24 @@
         font-size: 12px;
         font-weight: 500;
         font-style: normal;
-        line-height: 1.58;    
+        line-height: 1.58;  
+        cursor: default;  
+
+        &:hover {
+            animation: animate_grow 2s 1;    
+        
+            @keyframes animate_grow {
+                0% {
+                transform: scale3d(1, 1, 1);
+                }
+                50% {
+                transform: scale3d(1.2, 1.2, 1.2);
+                }
+                100% {
+                transform: scale3d(1, 1, 1);
+                }
+                }
+            }
         
         @media screen and (min-width: $tablet) {
             font-size: 14px;
@@ -207,12 +258,6 @@
         
         @media screen and (min-width: $tablet) {
             margin-bottom: 9px;
-
-            &:hover {
-                transform: scale(1.5);
-                transform: rotate(90deg);    
-                transform: translateX(50px);
-                }
         }
 
         @media screen and (min-width: $desktop) {
@@ -224,12 +269,6 @@
         
         @media screen and (min-width: $tablet) {
             margin-bottom: 62px;
-
-            &:hover {
-                transform: scale(1.5);
-                transform: rotate(90deg);    
-                transform: translateX(-50px);
-                }
         }
 
         @media screen and (min-width: $desktop) {
