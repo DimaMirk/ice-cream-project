@@ -1,6 +1,113 @@
-header {
-   background-color: $header-base-color;;
+$timing-function:              cubic-bezier(0.4, 0, 0.2, 1);
+$trans-direct:                 250ms;
+
+@mixin animation-efect ($efect) {
+    transition: $efect $trans-direct $timing-function;
 }
+// Header + Abimation
+header {
+    background: linear-gradient(-45deg, #FFB8CA, #9F465B, #F6A7BB, #AF6678);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+$bubble-count: 50;
+  $sway-type: "sway-left-to-right", "sway-right-to-left";
+  
+  @function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }
+  
+  @function sample($list) {
+    @return nth($list, random(length($list)));
+  }
+  
+  .bubbles {
+    position: absolute;
+    width: 100vw;
+    height: 501px;
+    overflow: hidden;
+    @media screen and (min-width: $tablet) {
+    height: 398px;
+    }
+    @media screen and (min-width: $desktop) {
+        height: 664px;
+        }
+  }
+  
+  .bubble {
+    position: absolute;
+    left: var(--bubble-left-offset);
+    bottom: -75%;
+    display: block;
+    width: var(--bubble-radius);
+    height: var(--bubble-radius);
+    border-radius: 50%;
+    animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(183, 43%, 90%, 0.3);
+      border-radius: inherit;
+      animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+    }
+  
+    @for $i from 0 through $bubble-count {
+      &:nth-child(#{$i}) {
+        --bubble-left-offset: #{random_range(0vw, 100vw)};
+        --bubble-radius: #{random_range(1vw, 10vw)};
+        --bubble-float-duration: #{random_range(6s, 12s)};
+        --bubble-sway-duration: #{random_range(4s, 6s)};
+        --bubble-float-delay: #{random_range(0s, 4s)};
+        --bubble-sway-delay: #{random_range(0s, 4s)};
+        --bubble-sway-type: #{sample($sway-type)};
+      }
+    }
+  }
+  
+  @keyframes float-up {
+    to {
+      transform: translateY(-175vh);
+    }
+  }
+  
+  @keyframes sway-left-to-right {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes sway-right-to-left {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
 
 .container--modicator{
     height: 502px;
@@ -19,8 +126,6 @@ header {
         padding-top: 37px;
         height: 399px;
         border: none; 
-        // overflow: visible;
-
         background-size: 322px 322px;
         background-position: bottom 46px right 137px;
     }
@@ -99,9 +204,15 @@ header {
     background-color: $button-white-color;
     color: $accent-color;
 
+    @include animation-efect (transform);
+    @include animation-efect (background-color);
+
+    
+
     &:hover,
     :focus {
         background-color:#ECEBEB;
+        transform: translateY(-3px);
     }
 
     @media screen and (min-width: $tablet){
@@ -117,9 +228,6 @@ header {
         stroke: $accent-color;
     }
 
-}
-.buy.hiddenBtn{
-    display: none;
 }
 // Меню Навігації
 
@@ -191,6 +299,7 @@ header {
             border: none;
             padding: 0;
         }
+        
     }
 
     &--link {
@@ -200,10 +309,13 @@ header {
         line-height: 1.28;
         color: $button-white-color;
         cursor: pointer;
+        @include animation-efect (background-color);
+        @include animation-efect (transform);
         &:hover,:focus {
+            transform: translateY(-2px);
             color: $accent-color;
         }
-        
+    
     }
 
     &--current{
@@ -225,7 +337,6 @@ header {
     }
 }
 
-
 .nav-tools__button {
     width: 209px;
     height: 44px;
@@ -242,9 +353,12 @@ header {
     font-size: 16px;
     line-height: 21px;
     color: $accent-color;
+    @include animation-efect (background-color);
+    @include animation-efect (transform);
 
     &:hover,
     :focus {
+      transform: translateY(-2px);
       background-color:#ECEBEB;
     }
 
@@ -276,7 +390,6 @@ header {
     .icon-close {
         stroke: $button-white-color;
     }
-    
 
 }
     
@@ -317,6 +430,7 @@ header {
         color: $button-white-color;
         z-index: 10;
         margin-bottom: 19px;
+        cursor: default;
         
         @media screen and (min-width: $tablet){
             font-size: 22px;
@@ -348,16 +462,35 @@ header {
 .button-hold {
     display: flex;
 }
-
-.caption__button-one,
-.caption__button-two{
+.caption__button-link-one,
+.caption__button-link-two {
     height: 24px;
     font-size: 8px;
     line-height: 1.25;
+
+    @media screen and (min-width: $desktop){
+        height: 40px;
+        font-size: 14px;
+        line-height: 1.28;
+    } 
+    
+}
+
+
+.caption__button-link {
+    color: $accent-color;
+}
+
+.caption__button-one,
+.caption__button-two{
     border-radius: 20px;
     padding: 0 14px;
     margin: 0;
     cursor: pointer;
+    height: 24px;
+    font-size: 8px;
+    line-height: 1.25;
+
     @media screen and (min-width: $desktop){
         height: 40px;
         font-size: 14px;
@@ -367,28 +500,38 @@ header {
 
 .caption__button-one {
     background-color: $accent-color;
-    color: $button-white-color;
     margin-right: 10px;
     width: 62px;
+
     @media screen and (min-width: $desktop){
         width: 102px;
     }
     &:hover,
     :focus {
         background-color: #C7133E;
+        transform: translateY(-3px);
+    }
+
+    &-link{
+        color: $button-white-color;
     }
 }
 
 .caption__button-two {
     background-color:$button-white-color ;
-    color: $accent-color;
     width: 84px;
+    color: $accent-color;
     @media screen and (min-width: $desktop){
         width: 138px;
     }
     &:hover,
     :focus {
         background-color: #ECEBEB;
+        transform: translateY(-3px);
+    }
+
+    &-link{
+    color: $accent-color;
     }
 }
 
@@ -461,6 +604,7 @@ header {
 // Картинки на герої
 
 .icon-circle {
+    z-index: -5;
     position: absolute; 
     right: -62px;
     bottom: 75px;
@@ -626,20 +770,6 @@ header {
             }
         }
 
-
-    //     width: 124px;
-    //     height: 126px;
-    //     position: absolute;
-    //     top: -60px;
-    //     left: -126px;
-
-    //     @media screen and (min-width: $desktop){
-    //         width: 188px;
-    //         height: 191px;
-    //         top: -70px;
-    //         left: -200px;
-    //     }
-    // } 
     }   
 }
 
@@ -653,6 +783,7 @@ header {
     color: $button-white-color;
     position: relative;
     
+    
     @media screen and (min-width: $tablet){
         margin-left: 0;
     }
@@ -662,7 +793,9 @@ header {
         font-size: 14px;
         line-height: 1.43; 
     }
-    
+    &__text {
+        cursor: default;
+    }
 }
 
 .button-big-eco {
@@ -673,13 +806,33 @@ header {
     border-radius: 50%;
     background-color: $button-white-color;
     
+
+    
+    &:hover .button-big-eco__icon {
+        transform: rotate(90deg);
+        width: 23px;
+        height: 23px;
+        margin-top: -4px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+        background-color: $accent-color;
+        border-radius: 50%;
+        fill: $button-white-color;
+        @media screen and (min-width: $desktop){
+            width: 32px;
+            height: 32px;
+            margin-top: -3px;
+        }
+    }
     @media screen and (min-width: $desktop){
         width: 26px;
         height: 26px;
     }
 
     &__icon {
-        fill: $accent-color; 
+        fill: $accent-color;
+        transition: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition-property: fill, box-shadow, transform, background-color, width, height, margin-top;
+        
         
         @media screen and (min-width: $desktop){
             width: 26px;
@@ -687,3 +840,4 @@ header {
         }
     }   
 }
+
