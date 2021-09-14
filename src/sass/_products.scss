@@ -2,7 +2,6 @@
   padding-top: 121px;
   padding-bottom: 98px;
   background-color: $button-white-color;
-  
 
   @media screen and (min-width: $tablet) {
     padding-top: 122px;
@@ -364,6 +363,7 @@
     background-color: $accent-color;
     border-radius: 35%;
     fill: $button-white-color;
+    cursor: pointer;
   }
 
   &:hover .product__description {
@@ -373,6 +373,7 @@
   &:hover .product__name {
     z-index: 60;
     font-size: 22px;
+    cursor: pointer;
     @media screen and (min-width: $desktop) {
       font-size: 33px;
     }
