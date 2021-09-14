@@ -9,9 +9,9 @@
                     <p >Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                </div>
                <div class="section-contacts__schedule">
-                   <h2 class="section-contacts__subtitle">Monday - Friday</h2>
-                   <span class="section-contact__time-information">06:00 AM - 10:00 PM</span>
-                   <h2 class="section-contacts__subtitle">Saturday - Sunday</h2>
+                   <h2 class="section-contacts__subtitle day">Monday - Friday</h2>
+                   <p class="section-contact__time-information">06:00 AM - 10:00 PM</p>
+                   <h2 class="section-contacts__subtitle day">Saturday - Sunday</h2>
                    <span class="section-contact__time-information">08:00 AM - 16:00 PM</span>
                </div>
                <div class="section-contacts__contacts">
@@ -27,9 +27,9 @@
                      <p >Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 </div>
                 <div class="section-contacts__schedule">
-                    <h2 class="section-contacts__subtitle">Monday - Friday</h2>
-                    <span class="section-contact__time-information">06:00 AM - 10:00 PM</span>
-                    <h2 class="section-contacts__subtitle">Saturday - Sunday</h2>
+                    <h2 class="section-contacts__subtitle day">Monday - Friday</h2>
+                    <p class="section-contact__time-information">06:00 AM - 10:00 PM</p>
+                    <h2 class="section-contacts__subtitle day">Saturday - Sunday</h2>
                     <span class="section-contact__time-information">08:00 AM - 16:00 PM</span>
                 </div>
                 <div class="section-contacts__contacts">
@@ -45,9 +45,9 @@
                      <p >Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 </div>
                 <div class="section-contacts__schedule">
-                    <h2 class="section-contacts__subtitle">Monday - Friday</h2>
-                    <span class="section-contact__time-information">06:00 AM - 10:00 PM</span>
-                    <h2 class="section-contacts__subtitle">Saturday - Sunday</h2>
+                    <h2 class="section-contacts__subtitle day">Monday - Friday</h2>
+                    <p class="section-contact__time-information">06:00 AM - 10:00 PM</p>
+                    <h2 class="section-contacts__subtitle day">Saturday - Sunday</h2>
                     <span class="section-contact__time-information">08:00 AM - 16:00 PM</span>
                 </div>
                 <div class="section-contacts__contacts">
@@ -58,7 +58,10 @@
         </ul>
         <ul class="section-contact__btn-list">
             <li >
-                <button class="section-contact__btn one" data-modal-open-s>Our Locations 
+                <button class="section-contact__btn one" data-modal-open-s 
+                aria-expanded="false"
+                aria-controls="menu">
+                Our Locations 
                     <svg class="btn-icon one">
                         <use href="./images/sprite.svg#icon-Vector-1" ></use>
                     </svg>
@@ -87,7 +90,7 @@
       </button>
       <p class="modal__title">We will be glad to see you</p>
       <div class="modal__map">
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8663399464604!2d30.531895015730505!3d50.42496187947188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d96f5139689b%3A0xa1f7c65300bebad1!2sGoIT!5e0!3m2!1suk!2sua!4v1631529237569!5m2!1suk!2sua" width="370" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe  class="modal__google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8663399464604!2d30.531895015730505!3d50.42496187947188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d96f5139689b%3A0xa1f7c65300bebad1!2sGoIT!5e0!3m2!1suk!2sua!4v1631529237569!5m2!1suk!2sua"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
       <p class="modal__adress">Yevhen Konovalets Street, 36, Kyiv, 02000</p>
       <button class="modal_map-btn"><a  target="_blank" href="https://www.google.com/maps/place/GoIT/@50.4249619,30.531895,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4d96f5139689b:0xa1f7c65300bebad1!8m2!3d50.4249597!4d30.5340916" class="modal_btn-text">Open in Google Maps</a></button>
