@@ -7,7 +7,6 @@
   const closeMenuBtnThree = document.querySelector('.closeMenuBtnThree');
   const closeMenuBtnFour = document.querySelector('.closeMenuBtnFour');
   const closeMenuBtnFive = document.querySelector('.closeMenuBtnFive');
-  const burger = document.querySelector('.burger');
   const heroBtn = document.querySelector('.heroBtn');
   const toggleMenu = () => {
     const isMenuOpen =
@@ -29,7 +28,6 @@
   closeMenuBtnThree.addEventListener('click', toggleMenu);
   closeMenuBtnFour.addEventListener('click', toggleMenu);
   closeMenuBtnFive.addEventListener('click', toggleMenu);
-  burger.addEventListener('click', toggleMenu);
 
   // Закрываем мобильное меню на более широких экранах
   // в случае изменения ориентации устройства.
