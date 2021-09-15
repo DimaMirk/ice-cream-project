@@ -36,7 +36,7 @@ $bubble-count: 50;
   
   .bubbles {
     position: absolute;
-    width: 100vw;
+    width: 99vw;
     height: 501px;
     overflow: hidden;
     @media screen and (min-width: $tablet) {
