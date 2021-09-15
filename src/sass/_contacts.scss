@@ -75,7 +75,7 @@ h1,h2,h3,h4,h5,h6{
         
     }
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:768px) {
        
         @include marginesPaddings( -78px auto 0 auto, 50px 29px);
         &:last-child{
@@ -106,18 +106,20 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .section-contacts__cart-list{
-    @media screen and (max-width:$tablet) {
+    @media screen and (max-width:768px) {
         display: flex;
         flex-direction: column;  
     }
-
+    
     @media screen and (min-width: $tablet) {
         display: flex;
         margin-bottom: 81px;
+        flex-direction: row;
     }
 }
 .section-contacts__item-minus{
-    @media screen and (max-width:$tablet) {
+    @media screen and (max-width:768px) {
+        display: flex;
         margin-top: -84px;
      } 
     }
