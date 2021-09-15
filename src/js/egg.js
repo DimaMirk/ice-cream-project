@@ -1,6 +1,6 @@
-var modal = document.getElementById('myModalBuy');
-var btn = document.getElementById("myBtnBuy");
-var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById('myModalEgg');
+var btn = document.getElementById("myBtnEgg");
+var span = document.getElementsByClassName("closeX")[0];
 btn.onclick = function() {
     modal.style.display = "block";
 }
@@ -12,3 +12,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
