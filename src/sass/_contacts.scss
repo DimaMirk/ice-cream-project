@@ -23,7 +23,9 @@ h1,h2,h3,h4,h5,h6{
     margin:$margin;
     padding: $padding;
 }
-
+.section-contacts__title.hidden{
+    margin-top: -110px;
+}
 // Section
 
 .section-contacts{

@@ -1,5 +1,5 @@
 <!-- Хедер -->
-<header >
+<header id="header">
     <div class="bubbles">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -90,11 +90,19 @@
                 <nav class="navigation">
 
                     <ul class="navigation__list">
-                        <li class="navigation__list--item"><a class="navigation__list--link navigation__list--current closeMenuBtnOne">Home</a></li>
-                        <li class="navigation__list--item"><a class="navigation__list--link closeMenuBtnTwo" href="#how-it's-made">About us</a></li>
+                        <li class="navigation__list--item"><a class="navigation__list--link navigation__list--current closeMenuBtnOne" href="#header">Home</a></li>
+                        <li class="navigation__list--item"><a class="navigation__list--link closeMenuBtnTwo" href="#customer-reviews">About us</a></li>
                         <li class="navigation__list--item"><a class="navigation__list--link closeMenuBtnThree" href="#how-it's-made">How it’s made?</a></li>
                         <li class="navigation__list--item"><a class="navigation__list--link closeMenuBtnFour" href="#products">Our products</a></li>
                         <li class="navigation__list--item"><a class="navigation__list--link closeMenuBtnFive" href="#contacts">Contact</a></li>
+                    </ul>
+
+                    <ul class="navigation__desktop">
+                        <li class="navigation__desktop--item"><a class="navigation__desktop--link navigation__desktop--current" href="#header">Home</a></li>
+                        <li class="navigation__desktop--item"><a class="navigation__desktop--link" href="#customer-reviews">About us</a></li>
+                        <li class="navigation__desktop--item"><a class="navigation__desktop--link" href="#how-it's-made">How it’s made?</a></li>
+                        <li class="navigation__desktop--item"><a class="navigation__desktop--link" href="#products">Our products</a></li>
+                        <li class="navigation__desktop--item"><a class="navigation__desktop--link" href="#contacts">Contact</a></li>
                     </ul>
 
                 </nav>
@@ -118,7 +126,7 @@
                     aria-expanded="false"
                     aria-controls="menu">
 
-                    <svg class="burger__icon" width="20" height="12">
+                    <svg class="burger__icon" width="25" height="17">
                     <use href="./images/sprite.svg#icon-Burger"></use>
                     </svg>
                 
@@ -145,7 +153,7 @@
                     
                     <div class="caption">
                         <div>
-                            <!-- Заголовок сайту -->
+                                <!-- Заголовок сайту -->
                                 <h1 class="caption__title">ice cream <br> made with <br>
                                     <span class="caption__passion">passion</span>
                                 </h1>
