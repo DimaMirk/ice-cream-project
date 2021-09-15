@@ -8,6 +8,8 @@
   const closeMenuBtnFour = document.querySelector('.closeMenuBtnFour');
   const closeMenuBtnFive = document.querySelector('.closeMenuBtnFive');
   const heroBtn = document.querySelector('.heroBtn');
+  const btnbuymob = document.querySelector('.nav-tools__button');
+
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -28,6 +30,7 @@
   closeMenuBtnThree.addEventListener('click', toggleMenu);
   closeMenuBtnFour.addEventListener('click', toggleMenu);
   closeMenuBtnFive.addEventListener('click', toggleMenu);
+  btnbuymob.addEventListener('click', toggleMenu);
 
   // Закрываем мобильное меню на более широких экранах
   // в случае изменения ориентации устройства.
