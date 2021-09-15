@@ -79,7 +79,7 @@
 
             <!-- Кнопка навигаціцї та відкриття модалки -->
 
-                <button type="button" class="nav-tools__button" id="myBtnBuyMob">
+                <button type="button" class="nav-tools__button">
                 Buy now <svg class="icon-buy" width="8" height="10">
                     <use href="./images/sprite.svg#icon-Vector-1"></use>
                     </svg>
@@ -111,72 +111,20 @@
 
             <div class="menu-switch">
 
-    <!-- Секція герой, банер, кнопки, зображення, лічильник, -->
+                <button type="button" class="buy heroBtn">
+                    Buy now 
+                    <svg class="buy__icon" width="8" height="10">
+                        <use href="./images/sprite.svg#icon-Vector-1"></use>
+                    </svg>
+                </button>
 
-    <!-- Картинка Галі & Морозиво-->
+                <!-- Кнопка бургера -->
+            
+                <button type="button"
 
-    <a href="#" class="hero__link--sootasty"> </a>
-
-    <a href="#" class="hero__link--icecream">
-      <picture>
-        <source
-          media="(max-width: 767px)"
-          srcset="
-            ./images/hero-header/ice-cream480.png    1x,
-            ./images/hero-header/ice-cream480@2x.png 2x
-          "
-        />
-        <source
-          media="(max-width: 1279px)"
-          srcset="
-            ./images/hero-header/ice-cream768.png    1x,
-            ./images/hero-header/ice-cream768@2x.png 2x
-          "
-        />
-        <source
-          media="(min-width: 1280px)"
-          srcset="
-            ./images/hero-header/ice-cream1280.png    1x,
-            ./images/hero-header/ice-cream1280@2x.png 2x
-          "
-        />
-        <img src="./images/hero-header/ice-cream.png" alt="морозиво" />
-      </picture>
-    </a>
-
-    <div class="caption">
-      <div>
-        <!-- Заголовок сайту -->
-        <h1 class="caption__title">
-          ice cream <br />
-          made with <br />
-          <span class="caption__passion">passion</span>
-        </h1>
-        <div class="button-hold">
-          <!-- Кнопки якорні секцій -->
-          <button class="caption__button-one">
-            <a href="#products" class="caption__button-one-link"> Products</a>
-          </button>
-          <button class="caption__button-two">
-            <a href="#" class="caption__button-two-link"></a>How it’s made?
-          </button>
-        </div>
-      </div>
-      <!-- Лічильник продаж та доставок сайту -->
-      <div class="counter-sale">
-        <ul class="counter-sale__list">
-          <li class="counter-sale__item">16 <br /><span class="counter-sale__span">cafes</span></li>
-          <li class="counter-sale__item counter-sale__item--size">
-            23 <br /><span class="counter-sale__span">food trucks</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Секція з молоком -->
-
-    <div class="big-eco">
-      <a href="#" class="big-eco__picture"></a>
+                    class="burger js-open-menu"
+                    aria-expanded="false"
+                    aria-controls="menu">
 
                     <svg class="burger__icon" width="25" height="17">
                     <use href="./images/sprite.svg#icon-Burger"></use>
@@ -248,5 +196,4 @@
                         
                     </div>
     </div>
-  </div>
 </header>

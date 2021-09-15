@@ -27,9 +27,9 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-// mousewheel: {
-//     invert: true,
-//   },
+mousewheel: {
+    invert: true,
+  },
   scrollbar: {
     el: '.swiper-scrollbar',
   },
