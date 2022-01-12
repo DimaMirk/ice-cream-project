@@ -1,16 +1,16 @@
 {
-  "name": "Fast_IT-team-project",
+  "name": "Fast_IT-HTML-project",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Alex8LSM.github.io/Fast_IT-team-project",
+  "homepage": "https://Alex8LSM.github.io/Fast_IT-HTML-project",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Fast_IT-team-project/"
+    "build": "parcel build src/*.html --public-url /Fast_IT-HTML-project/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alex8LSM/Fast_IT-team-project.git"
+    "url": "git+https://github.com/Alex8LSM/Fast_IT-HTML-project.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
